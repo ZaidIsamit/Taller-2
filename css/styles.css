@@ -1,0 +1,37 @@
+/* ============================================================
+   Sistema de Reservas de Espacios Universitarios
+   Estilos base — variables de color (design tokens) y reglas
+   generales que comparten todos los demás archivos CSS.
+   Este archivo debe cargarse primero: header.css, salas.css e
+   inicio-sesion.css usan las variables var(--...) definidas acá.
+============================================================ */
+
+:root{
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface-alt: #eef1f7;
+  --border: #dbe1ec;
+  --text: #1c2333;
+  --text-muted: #64708a;
+
+  --primary: #1f4e8c;
+  --primary-hover: #163a68;
+  --primary-soft: #e2ebfb;
+
+  --success: #1a8f5e;
+  --success-soft: #e2f5ec;
+  --danger: #c23b3b;
+  --danger-soft: #fbe7e6;
+
+  --role-estudiante: #2f6fed;
+  --role-docente: #7c4fd6;
+  --role-org: #c07a12;
+  --role-admin: #5c6b82;
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
