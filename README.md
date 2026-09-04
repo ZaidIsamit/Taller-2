@@ -4,11 +4,9 @@ Actividad Evaluada 1 — Desarrollo Web y Móvil — Segundo Semestre 2026
 
 ## Integrantes
 
-- Zaid Isamit Alvial — rol en el equipo
-- Agustin Carmona — rol en el equipo
-- Jhon Rojas — rol en el equipo
-
-> Completar la columna "rol en el equipo" (qué hizo cada persona en el proyecto).
+- Zaid Isamit Alvial
+- Agustin Carmona
+- Jhon Rojas
 
 ## Problemática
 
@@ -81,17 +79,10 @@ TrabajoUnab/
 └── README.md
 ```
 
-## Cómo ejecutar
 
-No requiere instalación ni build. Basta con abrir `index.html` en un navegador
-(o servirlo con una extensión tipo "Live Server").
-
-## Flujo de trabajo Git / Git Flow
+## Flujo de trabajo Git Flow
 
 - `main`: versión estable del proyecto.
-- `develop`: rama de integración, donde se juntan todas las funcionalidades.
-- Una rama `feature/` por módulo, cada una con su propio Pull Request hacia `develop`:
-  - `feature/header` — barra superior y cierre de sesión.
-  - `feature/inicio-sesion` — RUT y control de acceso.
-  - `feature/salas` — espacios, filtros, grilla y reservas.
-- `develop` se integra a `main` una vez que todas las `feature/*` están fusionadas.
+  - `header` — barra superior y cierre de sesión.
+  - `inicio-sesion` — RUT y control de acceso.
+  - `salas` — espacios, filtros, grilla y reservas.
