@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 
-// Modal controlado por React: se muestra mientras el padre lo renderiza.
-// Usa las clases de Bootstrap para el aspecto, pero no su JavaScript.
 export default function Modal({ titulo, subtitulo, onCerrar, children, pie, tamano = "" }) {
   useEffect(() => {
-    // Cerrar con Escape y bloquear el scroll del fondo mientras está abierto.
     function alPresionarTecla(e) {
       if (e.key === "Escape") onCerrar();
     }

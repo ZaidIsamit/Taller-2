@@ -1,11 +1,5 @@
-/* ============================================================
-   Tokens de diseño: colores, tipografía, radios y sombras.
-   Paleta basada en el logo UNAB (azul marino, rojo y dorado).
-   Todos los demás archivos usan estas variables.
-============================================================ */
-
 :root {
-  /* Marca */
+
   --navy-950: #071a33;
   --navy-900: #0b2545;
   --navy-800: #13315c;
@@ -13,7 +7,6 @@
   --red-600: #b3122e;
   --gold-400: #f2c230;
 
-  /* Superficies y texto */
   --bg: #f4f6fb;
   --surface: #ffffff;
   --surface-alt: #f0f3f9;
@@ -21,12 +14,10 @@
   --text: #0f1b2d;
   --text-muted: #5b6b82;
 
-  /* Acción principal */
   --primary: #1d4e89;
   --primary-hover: #163d6c;
   --primary-soft: #e6eef9;
 
-  /* Estados de bloques horarios */
   --libre: #14935a;
   --libre-soft: #e5f5ec;
   --ocupado: #d64550;
@@ -36,16 +27,13 @@
   --pasado: #c3ccd9;
   --pasado-soft: #f1f3f7;
 
-  /* Lluvia / aviso */
   --rain: #2563eb;
   --rain-soft: #e8f0ff;
 
-  /* Roles */
   --role-estudiante: #2f6fed;
   --role-docente: #7c4fd6;
   --role-org: #c07a12;
 
-  /* Tonos por tipo de espacio */
   --tone-azul: #2f6fed;
   --tone-violeta: #7c4fd6;
   --tone-verde: #14935a;

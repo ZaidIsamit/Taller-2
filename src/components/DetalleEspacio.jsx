@@ -6,8 +6,6 @@ import roles from "../data/roles.json";
 import { fechaISO, formatearFechaLarga } from "../utils/fechas.js";
 import { estadosDelDia, horasLibresConsecutivas } from "../utils/reservas.js";
 
-// Modal con los horarios de un espacio y el formulario de reserva.
-// Flujo: elegir fecha → elegir bloque libre → completar formulario → confirmar.
 export default function DetalleEspacio({
   espacio,
   fecha,
@@ -19,7 +17,6 @@ export default function DetalleEspacio({
   onReservar,
   onCerrar
 }) {
-  // seleccion = { hora, duracion } del bloque elegido, o null si aún no elige.
   const [seleccion, setSeleccion] = useState(null);
 
   const estados = estadosDelDia(reservas, espacio.id, fecha, usuario.rut);

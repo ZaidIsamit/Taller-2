@@ -1,5 +1,3 @@
-// Utilidades para RUT chileno: limpiar (solo dígitos y K) y formatear con puntos y guion.
-
 export function limpiarRut(valor) {
   return (valor || "").replace(/[^0-9kK]/g, "").toUpperCase().slice(0, 9);
 }

@@ -6,9 +6,6 @@ import { rangoHorario } from "../utils/fechas.js";
 const LARGO_MINIMO_MOTIVO = 5;
 const LARGO_MAXIMO_MOTIVO = 200;
 
-// Formulario de solicitud con validación. La hora de inicio y la duración
-// vienen del padre (porque también se pintan en el selector de horario);
-// personas, motivo y la confirmación de clima son estado propio del formulario.
 export default function FormularioReserva({
   espacio,
   hora,
@@ -27,8 +24,6 @@ export default function FormularioReserva({
   const [errores, setErrores] = useState({});
   const refFormulario = useRef(null);
 
-  // Al aparecer (o cambiar de bloque), llevar el formulario a la vista:
-  // en celulares queda bajo la grilla de horarios y no se vería.
   useEffect(() => {
     refFormulario.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [hora]);

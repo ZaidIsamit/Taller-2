@@ -1,8 +1,5 @@
-// Utilidades de fechas y horarios. Las fechas se manejan como texto "AAAA-MM-DD"
-// en hora local (no UTC), para que "hoy" sea el día real en Chile.
-
 export const HORA_APERTURA = 8;
-export const HORA_CIERRE = 21; // el último bloque es 20:00–21:00
+export const HORA_CIERRE = 21;
 
 export const HORAS = Array.from(
   { length: HORA_CIERRE - HORA_APERTURA },

@@ -1,13 +1,8 @@
-// Servicio de la API pública Open-Meteo (https://open-meteo.com/en/docs).
-// No requiere clave. Entrega el pronóstico por hora para una coordenada,
-// hasta 16 días hacia adelante.
-
 import { HORAS, diferenciaDias, fechaISO } from "../utils/fechas.js";
 
 const URL_BASE = "https://api.open-meteo.com/v1/forecast";
-export const DIAS_MAXIMOS_PRONOSTICO = 15; // hoy + 15 = 16 días que entrega la API
+export const DIAS_MAXIMOS_PRONOSTICO = 15;
 
-// Caché en memoria: evita volver a pedir el mismo pronóstico (misma sede y fecha).
 const cache = new Map();
 
 export class FueraDeRangoError extends Error {}
@@ -40,9 +35,6 @@ export async function obtenerPronosticoPorHora(sede, fecha, signal) {
   return pronostico;
 }
 
-// La API entrega arreglos paralelos (time[], temperature_2m[], ...) para las 24 horas.
-// Los convertimos a un objeto { 8: {...}, 9: {...}, ... } solo con el horario de la universidad,
-// más un resumen del día para la tarjeta de clima.
 function transformarRespuesta(json) {
   const { time, temperature_2m, precipitation_probability, weather_code } = json.hourly;
   const porHora = {};

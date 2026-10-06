@@ -3,8 +3,6 @@ import { HORAS, etiquetaHora } from "../utils/fechas.js";
 
 const TEXTO_ESTADO = { libre: "Libre", ocupado: "Ocupado", mio: "Tuya", pasado: "—" };
 
-// Grilla de bloques horarios del día. Cada bloque muestra su estado y,
-// si la API respondió, el clima pronosticado para esa hora.
 export default function SelectorHorario({ estados, climaPorHora, seleccion, onSeleccionarHora }) {
   function estaSeleccionada(hora) {
     return seleccion && hora >= seleccion.hora && hora < seleccion.hora + seleccion.duracion;

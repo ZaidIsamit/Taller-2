@@ -1,9 +1,3 @@
-/* ============================================================
-   Página de espacios: filtros, panel de clima, tarjetas del
-   catálogo, barra de ocupación y modal de horarios/reserva.
-============================================================ */
-
-/* ---------- Filtros ---------- */
 .filters-card {
   height: 100%;
   background: var(--surface);
@@ -45,7 +39,6 @@
   color: #fff;
 }
 
-/* ---------- Panel de clima ---------- */
 .weather-panel {
   height: 100%;
   display: flex;
@@ -61,7 +54,6 @@
   box-shadow: var(--shadow);
 }
 
-/* Imagen de fondo difuminada + capa azul encima para que el texto blanco se lea bien */
 .weather-panel::before,
 .weather-panel::after {
   content: "";
@@ -70,7 +62,7 @@
 }
 
 .weather-panel::before {
-  inset: -16px; /* se agranda para que el desenfoque no deje bordes claros */
+  inset: -16px;
   background: url("../assets/images/fondo-clima.png") center / cover no-repeat;
   filter: blur(3px);
 }
@@ -152,7 +144,6 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* ---------- Resultados ---------- */
 .results-head {
   display: flex;
   align-items: baseline;
@@ -176,7 +167,6 @@
   gap: 1rem;
 }
 
-/* ---------- Tarjeta de espacio ---------- */
 .space-card {
   display: flex;
   flex-direction: column;
@@ -187,7 +177,6 @@
   box-shadow: var(--shadow-sm);
   padding: 1.15rem;
 }
-
 
 .space-card-top {
   display: flex;
@@ -292,7 +281,6 @@
   color: var(--ocupado);
 }
 
-/* ---------- Barra de ocupación ---------- */
 .occupancy-bar {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
@@ -317,7 +305,6 @@
   margin-top: 0.25rem;
 }
 
-/* ---------- Modal de detalle ---------- */
 .detail-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -362,7 +349,6 @@
   margin-bottom: 1rem;
 }
 
-/* ---------- Bloques horarios ---------- */
 .slot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
@@ -439,7 +425,6 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ---------- Formulario de reserva ---------- */
 .reserve-form {
   margin-top: 1.25rem;
   padding: 1.15rem;

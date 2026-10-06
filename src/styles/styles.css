@@ -1,5 +1,3 @@
-/* Punto de entrada de los estilos propios. El orden importa:
-   primero los tokens, luego lo general y al final cada vista. */
 @import "./variables.css";
 @import "./base.css";
 @import "./layout.css";

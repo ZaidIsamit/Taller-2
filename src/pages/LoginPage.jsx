@@ -3,7 +3,6 @@ import logo from "../assets/images/logo-unab.jpg";
 import usuarios from "../data/usuarios.json";
 import { formatearRut, limpiarRut } from "../utils/rut.js";
 
-// Inicio de sesión por RUT: solo entran las personas de usuarios.json.
 export default function LoginPage({ onIniciarSesion }) {
   const [rut, setRut] = useState("");
   const [error, setError] = useState("");

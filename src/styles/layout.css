@@ -1,7 +1,3 @@
-/* ============================================================
-   Estructura general: barra superior y contenedor principal.
-============================================================ */
-
 .app-navbar {
   background: var(--navy-900);
   color: #fff;
@@ -80,7 +76,6 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-
 
 @media (max-width: 767.98px) {
   .app-main {

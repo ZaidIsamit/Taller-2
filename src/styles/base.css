@@ -1,8 +1,3 @@
-/* ============================================================
-   Estilos generales y ajustes a Bootstrap (botones, formularios,
-   modal, estados vacíos, skeletons, avisos).
-============================================================ */
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -19,7 +14,6 @@ a {
   min-width: 0;
 }
 
-/* ---------- Botones ---------- */
 .btn {
   font-weight: 600;
   border-radius: 10px;
@@ -49,7 +43,6 @@ a {
   font-weight: 600;
 }
 
-/* ---------- Formularios ---------- */
 .form-label {
   font-size: 0.8rem;
   font-weight: 600;
@@ -98,7 +91,6 @@ a {
   background-position: right 0.75rem center;
 }
 
-/* ---------- Textos comunes ---------- */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -132,7 +124,6 @@ a {
   max-width: 60ch;
 }
 
-/* ---------- Modal ---------- */
 .modal-content {
   border: 0;
   border-radius: var(--radius-lg);
@@ -170,7 +161,6 @@ a {
   }
 }
 
-/* ---------- Estado vacío ---------- */
 .empty-state {
   text-align: center;
   background: var(--surface);
@@ -191,7 +181,6 @@ a {
   font-size: 1.5rem;
 }
 
-/* ---------- Skeleton (carga) ---------- */
 .skeleton {
   display: block;
   border-radius: 8px;
@@ -225,7 +214,6 @@ a {
   to { background-position: -200% 0; }
 }
 
-/* ---------- Avisos flotantes ---------- */
 .toast-area {
   position: fixed;
   right: 1rem;
