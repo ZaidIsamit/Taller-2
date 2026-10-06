@@ -1,12 +1,3 @@
-/* ============================================================
-   Header — barra superior de la aplicación
-   Muestra los datos de la sesión activa (nombre, RUT y rol) y
-   controla el botón "Cerrar sesión".
-   Este archivo NO conoce la lógica de RUT ni de reservas: solo
-   pinta lo que le pasan otros módulos y avisa cuando el usuario
-   quiere cerrar sesión.
-============================================================ */
-
 (function () {
   "use strict";
 
