@@ -2,8 +2,6 @@ import { HORAS, etiquetaHora } from "../utils/fechas.js";
 
 const TEXTO_ESTADO = { libre: "Libre", ocupado: "Ocupado", mio: "Tu reserva", pasado: "Hora pasada" };
 
-// Línea de tiempo compacta del día (08:00–21:00): un segmento por bloque.
-// Recibe el estado de cada hora ya calculado por el padre.
 export default function BarraOcupacion({ estados }) {
   return (
     <div className="occupancy">

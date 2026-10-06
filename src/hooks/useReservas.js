@@ -4,8 +4,6 @@ import { fechaISO, sumarDias } from "../utils/fechas.js";
 
 const CLAVE_STORAGE = "unab_reservas_v2";
 
-// El JSON trae "diasDesdeHoy" en vez de una fecha fija, para que la demo
-// siempre tenga reservas cerca del día actual.
 function crearReservasSemilla() {
   const hoy = fechaISO();
   return reservasIniciales.map(({ diasDesdeHoy, ...reserva }) => ({
@@ -15,7 +13,6 @@ function crearReservasSemilla() {
   }));
 }
 
-// Concentra el estado de las reservas: la lista y la acción para crear una nueva.
 export function useReservas() {
   const [reservas, setReservas] = useLocalStorage(CLAVE_STORAGE, crearReservasSemilla);
 

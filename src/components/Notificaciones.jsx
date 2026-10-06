@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-// Avisos flotantes de confirmación. Cada uno se cierra solo a los 4 segundos.
 function Notificacion({ notificacion, onCerrar }) {
   useEffect(() => {
     const temporizador = setTimeout(() => onCerrar(notificacion.id), 4000);

@@ -1,7 +1,3 @@
-// Traduce los códigos de clima WMO que entrega Open-Meteo a un ícono de
-// Bootstrap Icons y una descripción en español.
-// Tabla oficial: https://open-meteo.com/en/docs (sección "WMO Weather interpretation codes").
-
 const CODIGOS = [
   { codigos: [0], icono: "bi-sun", texto: "Despejado" },
   { codigos: [1, 2], icono: "bi-cloud-sun", texto: "Parcialmente nublado" },
@@ -19,7 +15,6 @@ export function describirClima(codigo) {
   );
 }
 
-// Probabilidad de precipitación (%) desde la que se considera riesgo de lluvia.
 export const UMBRAL_LLUVIA = 40;
 
 export function hayRiesgoLluvia(climaHora) {

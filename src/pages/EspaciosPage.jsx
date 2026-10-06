@@ -24,7 +24,6 @@ function coincideBusqueda(espacio, texto) {
   return campos.some((c) => c.toLowerCase().includes(texto));
 }
 
-// Catálogo de espacios: filtros + clima de la sede + tarjetas + detalle para reservar.
 export default function EspaciosPage({ usuario, reservas, onCrearReserva }) {
   const [filtros, setFiltros] = useState(filtrosIniciales);
   const [espacioAbierto, setEspacioAbierto] = useState(null);
@@ -32,7 +31,6 @@ export default function EspaciosPage({ usuario, reservas, onCrearReserva }) {
   const sede = sedes.find((s) => s.id === filtros.sedeId);
   const clima = useClima(sede, filtros.fecha);
 
-  // Solo se recalcula cuando cambian los filtros (no al abrir/cerrar el modal).
   const espaciosFiltrados = useMemo(() => {
     const personas = Math.max(1, Number(filtros.personas) || 1);
     const texto = filtros.busqueda.trim().toLowerCase();
@@ -45,7 +43,6 @@ export default function EspaciosPage({ usuario, reservas, onCrearReserva }) {
     );
   }, [filtros]);
 
-  // ¿Hay alguna hora del día con riesgo de lluvia? Se usa para marcar los espacios exteriores.
   const lluviaEnElDia =
     clima.estado === "ok" && Object.values(clima.datos.porHora).some(hayRiesgoLluvia);
 

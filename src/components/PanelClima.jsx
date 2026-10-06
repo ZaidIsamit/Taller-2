@@ -2,8 +2,6 @@ import IconoClima from "./IconoClima.jsx";
 import { describirClima, UMBRAL_LLUVIA } from "../utils/clima.js";
 import { formatearFechaLarga } from "../utils/fechas.js";
 
-// Tarjeta con el resumen del clima del día para la sede elegida.
-// Recibe el resultado de useClima y muestra carga, error o los datos.
 export default function PanelClima({ clima, sede, fecha }) {
   return (
     <section className="weather-panel" aria-label="Pronóstico del clima">

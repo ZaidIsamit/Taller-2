@@ -1,7 +1,6 @@
 import logo from "../assets/images/logo-unab.jpg";
 import BadgeRol from "./BadgeRol.jsx";
 
-// Barra superior: marca, datos del usuario con sesión activa y botón para salir.
 export default function Navbar({ usuario, onCerrarSesion }) {
   return (
     <header className="app-navbar sticky-top">

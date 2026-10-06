@@ -4,12 +4,9 @@ import { fechaISO } from "../utils/fechas.js";
 
 const TIPOS = Object.keys(tiposEspacio);
 
-// Formulario de filtros. No guarda estado propio: recibe los filtros
-// desde la página y avisa cada cambio con onCambiar(campo, valor).
 export default function FiltrosEspacios({ filtros, onCambiar, onLimpiar }) {
   return (
     <section className="filters-card" aria-label="Filtros de búsqueda">
-      {/* Escritorio y tablet: chips. En celulares se reemplazan por un selector (más abajo). */}
       <div className="type-chips d-none d-md-flex" role="group" aria-label="Tipo de espacio">
         <button
           type="button"

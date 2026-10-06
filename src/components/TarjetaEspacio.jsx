@@ -1,7 +1,6 @@
 import BarraOcupacion from "./BarraOcupacion.jsx";
 import tiposEspacio from "../data/tiposEspacio.json";
 
-// Tarjeta del catálogo: datos del espacio + resumen de disponibilidad del día.
 export default function TarjetaEspacio({ espacio, estados, riesgoLluvia, onVerHorarios }) {
   const tipo = tiposEspacio[espacio.tipo];
   const libres = Object.values(estados).filter((e) => e === "libre").length;
