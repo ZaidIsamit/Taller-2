@@ -1,0 +1,516 @@
+/* ============================================================
+   Página de espacios: filtros, panel de clima, tarjetas del
+   catálogo, barra de ocupación y modal de horarios/reserva.
+============================================================ */
+
+/* ---------- Filtros ---------- */
+.filters-card {
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+}
+
+.type-chips {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.type-chip {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  transition: all 0.15s;
+}
+
+.type-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.type-chip.active {
+  background: var(--navy-900);
+  border-color: var(--navy-900);
+  color: #fff;
+}
+
+/* ---------- Panel de clima ---------- */
+.weather-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--navy-900);
+  box-shadow: var(--shadow);
+}
+
+/* Imagen de fondo difuminada + capa azul encima para que el texto blanco se lea bien */
+.weather-panel::before,
+.weather-panel::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.weather-panel::before {
+  inset: -16px; /* se agranda para que el desenfoque no deje bordes claros */
+  background: url("../assets/images/fondo-clima.png") center / cover no-repeat;
+  filter: blur(3px);
+}
+
+.weather-panel::after {
+  inset: 0;
+  background: linear-gradient(150deg, rgba(29, 78, 137, 0.5), rgba(11, 37, 69, 0.78));
+}
+
+.weather-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.weather-panel .eyebrow {
+  color: var(--gold-400);
+}
+
+.weather-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.weather-body {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-message {
+  align-items: flex-start;
+}
+
+.weather-big-icon {
+  font-size: 3.25rem;
+  line-height: 1;
+  color: var(--gold-400);
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.weather-min {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.weather-rain {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.weather-rain.is-risk {
+  background: #fff;
+  color: var(--rain);
+}
+
+.weather-credit {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.weather-credit a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Resultados ---------- */
+.results-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.results-head h2 {
+  font-weight: 700;
+}
+
+.results-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.space-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 1rem;
+}
+
+/* ---------- Tarjeta de espacio ---------- */
+.space-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.15rem;
+}
+
+
+.space-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.space-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.tone-azul { color: var(--tone-azul); background: #e9f0fe; }
+.tone-violeta { color: var(--tone-violeta); background: #f1ebfc; }
+.tone-verde { color: var(--tone-verde); background: #e5f5ec; }
+.tone-ambar { color: var(--tone-ambar); background: #fbf1e1; }
+.tone-cielo { color: var(--tone-cielo); background: #e1f5f9; }
+
+.space-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.space-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0.1rem 0 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.space-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.capacity-pill {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.feature-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: var(--surface-alt);
+  color: var(--text-muted);
+}
+
+.chip-outdoor {
+  background: #e1f5f9;
+  color: #0e7490;
+  font-weight: 600;
+}
+
+.chip-outdoor.is-risk {
+  background: var(--rain-soft);
+  color: var(--rain);
+}
+
+.space-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.availability {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--libre);
+}
+
+.availability.is-full {
+  color: var(--ocupado);
+}
+
+/* ---------- Barra de ocupación ---------- */
+.occupancy-bar {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 3px;
+}
+
+.occupancy-seg {
+  height: 10px;
+  border-radius: 3px;
+}
+
+.seg-libre { background: var(--libre); opacity: 0.85; }
+.seg-ocupado { background: var(--ocupado); }
+.seg-mio { background: var(--mio); }
+.seg-pasado { background: var(--pasado-soft); box-shadow: inset 0 0 0 1px var(--border); }
+
+.occupancy-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ---------- Modal de detalle ---------- */
+.detail-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-toolbar input {
+  max-width: 200px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+  vertical-align: -1px;
+}
+
+.dot-libre { background: var(--libre); }
+.dot-ocupado { background: var(--ocupado); }
+.dot-mio { background: var(--mio); }
+.dot-pasado { background: var(--pasado); }
+
+.detail-hint {
+  font-size: 0.88rem;
+  color: var(--text);
+  background: var(--surface-alt);
+  border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Bloques horarios ---------- */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  gap: 0.5rem;
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.6rem 0.25rem;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  font-size: 0.8rem;
+  transition: transform 0.1s, box-shadow 0.15s;
+}
+
+.slot-hour {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.slot-state {
+  font-weight: 600;
+  font-size: 0.72rem;
+}
+
+.slot-weather {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.slot-libre {
+  background: var(--libre-soft);
+  color: #0d6b41;
+  border-color: #c4e8d4;
+}
+
+.slot-libre:hover {
+  transform: translateY(-1px);
+  border-color: var(--libre);
+  box-shadow: 0 6px 14px -8px rgba(20, 147, 90, 0.6);
+}
+
+.slot-ocupado {
+  background: var(--ocupado-soft);
+  color: #a3333b;
+}
+
+.slot-mio {
+  background: var(--mio-soft);
+  color: #8a6904;
+  border-color: #f3dc8c;
+}
+
+.slot-pasado {
+  background: var(--pasado-soft);
+  color: #9aa6b6;
+}
+
+.slot:disabled {
+  cursor: not-allowed;
+}
+
+.slot.is-selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 8px 18px -8px rgba(29, 78, 137, 0.8);
+}
+
+.slot.is-selected .slot-weather {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Formulario de reserva ---------- */
+.reserve-form {
+  margin-top: 1.25rem;
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fbfcfe;
+  animation: toast-in 0.2s ease-out;
+}
+
+.reserve-form-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.reserve-range {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.reserve-weather {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.reserve-weather span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+}
+
+.alert-rain {
+  background: var(--rain-soft);
+  border: 1px solid #c9daff;
+  color: #1e3a8a;
+  border-radius: 12px;
+  font-size: 0.88rem;
+}
+
+.reserve-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 575.98px) {
+  .slot-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .detail-toolbar input {
+    max-width: none;
+  }
+
+  .detail-toolbar > div:first-child {
+    width: 100%;
+  }
+
+  .reserve-actions {
+    flex-direction: column-reverse;
+  }
+
+  .reserve-actions .btn {
+    width: 100%;
+  }
+}
+

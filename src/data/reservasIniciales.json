@@ -1,0 +1,8 @@
+[
+  { "id": "seed1", "espacioId": "R1-101", "diasDesdeHoy": 0, "hora": 10, "duracion": 2, "rutSolicitante": "999999999", "nombreSolicitante": "Otro usuario", "motivo": "Clase regular", "personas": 30 },
+  { "id": "seed2", "espacioId": "R2-301", "diasDesdeHoy": 0, "hora": 15, "duracion": 1, "rutSolicitante": "888888888", "nombreSolicitante": "Otro usuario", "motivo": "Reunión de coordinación", "personas": 8 },
+  { "id": "seed3", "espacioId": "C-110", "diasDesdeHoy": 1, "hora": 9, "duracion": 3, "rutSolicitante": "888888888", "nombreSolicitante": "Otro usuario", "motivo": "Laboratorio de Química Orgánica", "personas": 18 },
+  { "id": "seed4", "espacioId": "R-PATIO", "diasDesdeHoy": 2, "hora": 12, "duracion": 2, "rutSolicitante": "999999999", "nombreSolicitante": "Otro usuario", "motivo": "Feria de carreras", "personas": 70 },
+  { "id": "seed5", "espacioId": "V-101", "diasDesdeHoy": 0, "hora": 18, "duracion": 2, "rutSolicitante": "999999999", "nombreSolicitante": "Otro usuario", "motivo": "Taller de programación", "personas": 35 },
+  { "id": "seed6", "espacioId": "R1-201", "diasDesdeHoy": 3, "hora": 11, "duracion": 1, "rutSolicitante": "219931158", "nombreSolicitante": "Agustin Carmona", "motivo": "Estudio para certamen", "personas": 4 }
+]

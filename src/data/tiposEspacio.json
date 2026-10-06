@@ -1,0 +1,7 @@
+{
+  "Sala de clases": { "icono": "bi-easel2", "color": "azul" },
+  "Laboratorio": { "icono": "bi-pc-display", "color": "violeta" },
+  "Sala de estudio": { "icono": "bi-book", "color": "verde" },
+  "Sala de reunión": { "icono": "bi-people", "color": "ambar" },
+  "Espacio exterior": { "icono": "bi-tree", "color": "cielo" }
+}

@@ -1,0 +1,89 @@
+/* ============================================================
+   Estructura general: barra superior y contenedor principal.
+============================================================ */
+
+.app-navbar {
+  background: var(--navy-900);
+  color: #fff;
+  min-height: var(--navbar-h);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(7, 26, 51, 0.25);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #fff;
+}
+
+.brand-title {
+  display: block;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.user-rut {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.role-estudiante { background: var(--role-estudiante); }
+.role-docente { background: var(--role-docente); }
+.role-org { background: var(--role-org); }
+
+.btn-logout {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.app-main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+@media (max-width: 767.98px) {
+  .app-main {
+    padding-top: 1.25rem;
+  }
+}
