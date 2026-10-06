@@ -1,0 +1,5 @@
+[
+  { "id": "santiago", "nombre": "Santiago · República", "ciudad": "Santiago", "latitud": -33.4497, "longitud": -70.6750 },
+  { "id": "vina", "nombre": "Viña del Mar", "ciudad": "Viña del Mar", "latitud": -33.0245, "longitud": -71.5518 },
+  { "id": "concepcion", "nombre": "Concepción", "ciudad": "Concepción", "latitud": -36.8270, "longitud": -73.0498 }
+]

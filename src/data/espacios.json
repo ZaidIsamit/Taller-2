@@ -1,0 +1,14 @@
+[
+  { "id": "R1-101", "nombre": "Sala R1-101", "tipo": "Sala de clases", "sedeId": "santiago", "edificio": "Edificio R1", "piso": 1, "capacidad": 40, "exterior": false, "equipamiento": ["Proyector", "Aire acondicionado"] },
+  { "id": "R1-201", "nombre": "Laboratorio de Computación", "tipo": "Laboratorio", "sedeId": "santiago", "edificio": "Edificio R1", "piso": 2, "capacidad": 25, "exterior": false, "equipamiento": ["PCs", "Proyector"] },
+  { "id": "R2-101", "nombre": "Sala de estudio R2-101", "tipo": "Sala de estudio", "sedeId": "santiago", "edificio": "Edificio R2", "piso": 1, "capacidad": 6, "exterior": false, "equipamiento": ["Pizarra", "WiFi"] },
+  { "id": "R2-301", "nombre": "Sala de reunión R2-301", "tipo": "Sala de reunión", "sedeId": "santiago", "edificio": "Edificio R2", "piso": 3, "capacidad": 12, "exterior": false, "equipamiento": ["TV", "Videoconferencia"] },
+  { "id": "R-PATIO", "nombre": "Patio central", "tipo": "Espacio exterior", "sedeId": "santiago", "edificio": "Campus República", "piso": 0, "capacidad": 80, "exterior": true, "equipamiento": ["Escenario", "Enchufes exteriores"] },
+  { "id": "V-101", "nombre": "Sala V-101", "tipo": "Sala de clases", "sedeId": "vina", "edificio": "Edificio Los Castaños", "piso": 1, "capacidad": 45, "exterior": false, "equipamiento": ["Proyector", "Micrófono"] },
+  { "id": "V-205", "nombre": "Laboratorio de Física", "tipo": "Laboratorio", "sedeId": "vina", "edificio": "Edificio Los Castaños", "piso": 2, "capacidad": 20, "exterior": false, "equipamiento": ["Mesones", "Instrumental"] },
+  { "id": "V-310", "nombre": "Sala de estudio V-310", "tipo": "Sala de estudio", "sedeId": "vina", "edificio": "Edificio Los Castaños", "piso": 3, "capacidad": 8, "exterior": false, "equipamiento": ["Pizarra", "WiFi", "Enchufes"] },
+  { "id": "V-TERRAZA", "nombre": "Terraza mirador", "tipo": "Espacio exterior", "sedeId": "vina", "edificio": "Edificio Los Castaños", "piso": 4, "capacidad": 30, "exterior": true, "equipamiento": ["Mesas", "WiFi"] },
+  { "id": "C-110", "nombre": "Laboratorio de Química", "tipo": "Laboratorio", "sedeId": "concepcion", "edificio": "Edificio Autopista", "piso": 1, "capacidad": 22, "exterior": false, "equipamiento": ["Mesones", "Extractor de gases"] },
+  { "id": "C-204", "nombre": "Sala de reunión C-204", "tipo": "Sala de reunión", "sedeId": "concepcion", "edificio": "Edificio Autopista", "piso": 2, "capacidad": 10, "exterior": false, "equipamiento": ["Pizarra", "TV"] },
+  { "id": "C-CANCHA", "nombre": "Cancha multiuso", "tipo": "Espacio exterior", "sedeId": "concepcion", "edificio": "Campus Concepción", "piso": 0, "capacidad": 60, "exterior": true, "equipamiento": ["Graderías", "Iluminación"] }
+]
