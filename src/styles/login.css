@@ -1,0 +1,45 @@
+/* ============================================================
+   Pantalla de inicio de sesión: fondo blanco y una tarjeta
+   centrada en la pantalla, en cualquier tamaño.
+============================================================ */
+
+.login-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.login-panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+}
+
+.login-card .form-control {
+  text-align: center;
+}
+
+.login-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .login-card {
+    padding: 1.5rem 1.25rem;
+  }
+}

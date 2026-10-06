@@ -1,0 +1,5 @@
+{
+  "Estudiante": { "slug": "estudiante", "maxHorasPorReserva": 2, "icono": "bi-mortarboard" },
+  "Docente": { "slug": "docente", "maxHorasPorReserva": 4, "icono": "bi-person-workspace" },
+  "Organización Estudiantil": { "slug": "org", "maxHorasPorReserva": 3, "icono": "bi-people" }
+}
